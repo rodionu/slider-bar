@@ -1,4 +1,6 @@
-/*! rangeslider.js - v0.3.7 | (c) 2014 @andreruffert | MIT license | https://github.com/andreruffert/rangeslider.js */ ! function(a) {
+
+<script>
+! function(a) {
     "use strict";
     "function" == typeof define && define.amd ? define(["jquery"], a) : a("object" == typeof exports ? require("jquery") : jQuery)
 }(function(a) {
@@ -136,11 +138,9 @@
         })
     }
 });
-</script>
 
 <!-- EDIT SLIDER PARAMETERS-->
 
-<script>
     $('#ranger').change(function(){
       console.log($('#ranger').val())
       if($('#ranger').val() < 3){
@@ -187,3 +187,4 @@
       }
   });
   
+  </script>
