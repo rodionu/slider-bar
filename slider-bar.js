@@ -1,4 +1,4 @@
-! function(a) {
+/*! rangeslider.js - v0.3.7 | (c) 2014 @andreruffert | MIT license | https://github.com/andreruffert/rangeslider.js */ ! function(a) {
     "use strict";
     "function" == typeof define && define.amd ? define(["jquery"], a) : a("object" == typeof exports ? require("jquery") : jQuery)
 }(function(a) {
@@ -136,52 +136,3 @@
         })
     }
 });
-
-<!-- EDIT SLIDER PARAMETERS-->
-
-    $('#ranger').change(function(){
-      console.log($('#ranger').val())
-      if($('#ranger').val() < 3){
-        
-        $('.pricing-card').removeClass('active-1 active-2 active-3 display-hidden');
-        
-        $('.pricing-card').addClass('active-1');
-        
-        
-      } else if($('#ranger').val() > 4 && $('#ranger').val() < 10){
-        
-        $('.pricing-card').removeClass('active-1 active-2 active-3');
-        $('.pricing-card').addClass('active-2 display-hidden');
-        
-      } else if($('#ranger').val() > 11 && $('#ranger').val() < 50){
-        
-        $('.pricing-card').removeClass('active-1 active-2 active-3');
-        $('.pricing-card').addClass('active-3 display-hidden');
-      }
-     
-    })
-    
-    
-  $( document ).ready(function() {
-  // Handler for .ready() called.
-    $('.slide').removeClass('active');
-  });
-  $('input[type="range"]').rangeslider({
-      polyfill: false,
-      rangeClass: 'rangeslider',
-      fillClass: 'rangeslider__fill',
-      handleClass: 'rangeslider__handle',
-      onInit: function() {
-
-      },
-      onSlide: function(position, value) {
-          $('.rangeslider__handle').attr('data-content', value);
-          $('.done').removeClass('active');
-          $('.slide').addClass('active');
-      },
-      onSlideEnd: function(position, value) {
-        $('.done').addClass('active');
-        $('.slide').removeClass('active');
-      }
-  });
- 
